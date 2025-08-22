@@ -1,0 +1,36 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python bytecode and compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment directories
+venv/
+.venv/
+env/
+.env/
+
+# Data files or large outputs that should not be committed
+# Uncomment and modify as needed
+# data/
+# outputs/
+# *.csv
+# *.pkl
+# *.hdf5
+
+# Log files
+*.log
+
+# zip files
+*.zip
+
+# Operating system specific files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# IDE specific files (if applicable)
+.vscode/
+.idea/

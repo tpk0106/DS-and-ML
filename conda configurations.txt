@@ -1,0 +1,186 @@
+
+conda create -p C:\Users\thusi\Documents\env python=3.13
+
+new env folder created under documents
+
+then to activate 
+
+conda activate C:\Users\thusi\Documents\env
+
+to deactivate 
+conda deactivate C:\Users\thusi\Documents\env
+
+(C:\Users\thusi\Documents\env) PS C:\Users\thusi\Documents> conda install matplotlib numpy pandas scikit-learn jupyter
+
+
+-------create new env ------
+1 loadanaconda powershell 
+2 goto the folder you want to create env sub folder
+3 issue the below command 
+
+(base) PS C:\Data Science and ML>conda create -p "C:\Data Science and ML\env" python=3.13
+3 channel Terms of Service accepted
+WARNING conda.core.prefix_data:validate_path(324): Environment paths should not contain spaces. Prefix: 'C:\Data Science and ML\env'
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 25.5.1
+    latest version: 25.7.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: C:\Data Science and ML\env
+
+  added / updated specs:
+    - python=3.13
+
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              pkgs/main/win-64::bzip2-1.0.8-h2bbff1b_6
+  ca-certificates    pkgs/main/win-64::ca-certificates-2025.7.15-haa95532_0
+  expat              pkgs/main/win-64::expat-2.7.1-h8ddb27b_0
+  libffi             pkgs/main/win-64::libffi-3.4.4-hd77b12b_1
+  libmpdec           pkgs/main/win-64::libmpdec-4.0.0-h827c3e9_0
+  openssl            pkgs/main/win-64::openssl-3.0.17-h35632f6_0
+  pip                pkgs/main/noarch::pip-25.1-pyhc872135_2
+  python             pkgs/main/win-64::python-3.13.5-h286a616_100_cp313
+  python_abi         pkgs/main/win-64::python_abi-3.13-0_cp313
+  setuptools         pkgs/main/win-64::setuptools-78.1.1-py313haa95532_0
+  sqlite             pkgs/main/win-64::sqlite-3.50.2-hda9a48d_1
+  tk                 pkgs/main/win-64::tk-8.6.15-hf199647_0
+  tzdata             pkgs/main/noarch::tzdata-2025b-h04d1e81_0
+  ucrt               pkgs/main/win-64::ucrt-10.0.22621.0-haa95532_0
+  vc                 pkgs/main/win-64::vc-14.3-h2df5915_10
+  vc14_runtime       pkgs/main/win-64::vc14_runtime-14.44.35208-h4927774_10
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.44.35208-ha6b5a95_10
+  wheel              pkgs/main/win-64::wheel-0.45.1-py313haa95532_0
+  xz                 pkgs/main/win-64::xz-5.6.4-h4754444_1
+  zlib               pkgs/main/win-64::zlib-1.2.13-h8cc25b3_1
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate "C:\Data Science and ML\env"
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) PS C:\Data Science and ML>
+
+
+-------------activate folder created--------------
+
+
+(base) PS C:\Data Science and ML> conda activate "C:\Data Science and ML\env"
+(C:\Data Science and ML\env) PS C:\Data Science and ML>
+
+ -------install packages-------------
+(C:\Data Science and ML\env) PS C:\Data Science and ML> conda pandas install matplotlib numpy scikit-learn jupyter
+
+if you get the pageNotFoundError for any package (panda)
+run following command
+conda config --append channels conda-forge
+
+then run 
+
+
+
+Customizing an environment during Anaconda installation is not a direct option within the installer itself. The Anaconda installer primarily sets up the base Anaconda environment and the Anaconda Navigator. Custom environments are created after the initial installation.
+There are two primary ways to create and customize environments in Anaconda:
+1. Using Anaconda Navigator (Graphical User Interface):
+
+    Open Anaconda Navigator: Launch the Anaconda Navigator application.
+
+Navigate to Environments: In the left-hand pane, click on "Environments."
+Create New Environment: Click the "Create" button at the bottom of the environments list. 
+Configure Environment:
+
+    Provide a descriptive name for your new environment.
+
+Select the desired Python or R version for this environment.
+(Optional) Choose specific packages to include during creation, though most packages are typically installed after environment creation.
+
+Click Create: Anaconda will then create the new, customized environment.
+
+2. Using the Conda Command Line (Anaconda Prompt/Terminal):
+
+    Open Anaconda Prompt or Terminal: Launch the Anaconda Prompt (Windows) or a terminal with Conda initialized (macOS/Linux).
+    Create Environment: Use the conda create command to create a new environment.
+
+Code
+
+    conda create --name my_custom_env python=3.9 numpy pandas
+
+    Replace my_custom_env with your desired environment name.
+
+Specify a Python version (e.g., python=3.9) and any initial packages (e.g., numpy pandas).
+Activate Environment: After creation, activate the environment to work within it.
+
+Code
+
+    conda activate my_custom_env
+
+    Install Additional Packages: Install any other necessary packages using conda install.
+
+Code
+
+    conda install matplotlib scikit-learn
+
+Key Considerations for Customization:
+
+    Environment Isolation:
+    Each environment is isolated, meaning packages installed in one environment do not affect others. This prevents dependency conflicts between different projects.
+    Python/R Version:
+    Choose the specific Python or R version required for your project.
+    Package Management:
+    Install only the necessary packages to keep your environments clean and efficient.
+    Environment Variables:
+    For advanced customization, you can define environment-specific variables within the environment's activation/deactivation process.
+
+
+load jupyter notebook 
+
+1 load the terminal (python shell)
+
+to check all dev (if not sure)
+
+list all envs
+
+(C:\Data Science and ML\env) PS C:\Data Science and ML> conda env list
+
+# conda environments:
+#
+                     * C:\Data Science and ML\env
+                       C:\Users\thusi\Documents\env
+base                   C:\Users\thusi\anaconda3
+
+2 activate dev folder
+
+(base) : conda activate C:\Data Science and ML\env
+
+(C:\Data Science and ML\env) PS C:\Data Science and ML> jupyter notebook
+
+3 type jupyter notebook and load it. 
+(C:\Data Science and ML\env) PS C:\> jupyter notebook
